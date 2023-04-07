@@ -1,0 +1,124 @@
+<div>
+  <main>
+    {{#with web}}
+    <section>
+      {{> title line=false big=true data='languages'}}
+      <div>
+        {{#each languages}}
+        <ul>
+          <li>
+            <div>name - {{name}}</div>
+            <div>version - {{version}}</div>
+            <div>
+              <p>description - {{description}}</p>
+            </div>
+
+            {{#if elements}}
+            <hr>
+            <div>
+              elemenets
+              {{#each elements}}
+              <ul>
+                <li>
+                  <div>name - {{name}}</div>
+
+                  <div>
+                    <p>description - {{description}}</p>
+                  </div>
+
+                  <div>
+                    {{#each attributes}}
+                    <ul>
+                      <li>
+
+                        <div>name - {{name}}</div>
+
+                        <div>description - {{description}}</div>
+
+                      </li>
+                      <br>
+                    </ul>
+                    {{/each}}
+                  </div>
+                </li>
+              </ul>
+              {{/each}}
+            </div>
+            {{/if}}
+
+            {{#if properties}}
+            <hr>
+            <div>
+              properties
+              {{#each properties}}
+              <ul>
+                <li>
+
+                  <div>name - {{name}}</div>
+
+                  <div>description - {{description}}</div>
+
+                  <div>
+                    {{#each values}}
+                    <ul>
+                      <li>
+
+                        <div>color - {{value}}</div>
+
+                        <div>description - {{description}}</div>
+
+                      </li>
+                    </ul>
+                    {{/each}}
+                  </div>
+
+                </li>
+              </ul>
+              {{/each}}
+            </div>
+            {{/if}}
+
+            {{#if functions}}
+            <hr>
+            <div>
+              {{#each functions}}
+              <ul>
+                <li>
+
+                  <div><code>name - {{name}}</code></div>
+
+                  <div>
+                    <p>description - {{description}}</p>
+                  </div>
+
+                  <div>
+                    {{#each parameters}}
+                    <ul>
+                      <li>
+
+                        <div>name - {{name}}</div>
+
+                        <div>type - {{type}}</div>
+
+                        <div>description - {{description}}</div>
+                      </li>
+                    </ul>
+                    {{/each}}
+                  </div>
+
+                </li>
+              </ul>
+              {{/each}}
+            </div>
+            {{/if}}
+
+          </li>
+          <hr>
+          <hr>
+        </ul>
+        {{/each}}
+      </div>
+    </section>
+    {{/with}}
+  </main>
+</div>
