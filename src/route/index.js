@@ -629,4 +629,14 @@ router.get('/web', function (req, res) {
     })
 })
 
+router.get('/summary', function (req, res) {
+    res.render('summary', {
+
+        page: {
+            title: 'Resume | Java Script',
+        },
+
+    })
+})
+
 module.exports = router

@@ -1,134 +1,134 @@
 <div>
-  <main>
-    {{#with program}}
-    <section>
-      {{#with excursion}}
-      <div>
+    <main>
+        {{#with program}}
+        <section>
+            {{#with excursion}}
+            <div>
 
-        {{> title big=true data=name line=false}}
+                {{> title big=true data=name line=false}}
 
-        {{#with location}}
-        <address>city - {{city}}</address>
-        <address>country - {{country}}</address>
-        {{/with}}
+                {{#with location}}
+                <address>city - {{city}}</address>
+                <address>country - {{country}}</address>
+                {{/with}}
 
-        <div>
-          <time>date - {{date}}</time>
-        </div>
-
-        <hr>
-
-        <div>
-          program
-          {{#each program}}
-          <ul>
-            <li>
-
-              <div>name - {{name}}</div>
-              <div>type - {{type}}</div>
-              <div>duration - {{duration}}</div>
-
-              {{#with details}}
-              <div>
-                <hr>
-                {{#if museum}}museum
-                {{#with museum}}
                 <div>
+                    <time>date - {{date}}</time>
+                </div>
 
-                  <div>name - {{name}}</div>
+                <hr>
 
-                  <address>
-                    {{#each location}}
-                    {{this}}
-                    {{/each}}
-                  </address>
-
-                  <div>
-                    {{#each exhibits}}
+                <div>
+                    program
+                    {{#each program}}
                     <ul>
-                      <li>
+                        <li>
 
-                        <div>name - {{name}}</div>
+                            <div>name - {{name}}</div>
+                            <div>type - {{type}}</div>
+                            <div>duration - {{duration}}</div>
 
-                        <div>
-                          {{#if artist}}
-                          artist - {{artist}}
-                          {{/if}}
-                        </div>
+                            {{#with details}}
+                            <div>
+                                <hr>
+                                {{#if museum}}museum
+                                {{#with museum}}
+                                <div>
 
-                        <div>description - {{description}}</div>
+                                    <div>name - {{name}}</div>
 
-                        <div>
-                          audio_guide -
-                          {{#if name}}
-                          yes
-                          {{else}}
-                          no
-                          {{/if}}
-                        </div>
+                                    <address>
+                                        {{#each location}}
+                                        {{this}}
+                                        {{/each}}
+                                    </address>
 
-                      </li>
-                      <br>
+                                    <div>
+                                        {{#each exhibits}}
+                                        <ul>
+                                            <li>
+
+                                                <div>name - {{name}}</div>
+
+                                                <div>
+                                                    {{#if artist}}
+                                                    artist - {{artist}}
+                                                    {{/if}}
+                                                </div>
+
+                                                <div>description - {{description}}</div>
+
+                                                <div>
+                                                    audio_guide -
+                                                    {{#if name}}
+                                                    yes
+                                                    {{else}}
+                                                    no
+                                                    {{/if}}
+                                                </div>
+
+                                            </li>
+                                            <br>
+                                        </ul>
+                                        {{/each}}
+                                    </div>
+
+                                </div>
+                                <hr>
+                                {{/with}}
+                                {{/if}}
+
+                                {{#if venue}}
+                                {{#with venue}}
+                                <div>
+
+                                    <div>name - {{name}}</div>
+
+                                    <address>
+                                        {{#each location}}
+                                        {{this}}
+                                        {{/each}}
+                                    </address>
+
+                                </div>
+                                <hr>
+                                {{/with}}
+                                {{/if}}
+
+
+
+                                {{#if performers}}
+                                {{#each performers}}
+                                <div>
+                                    <div>name - {{name}}</div>
+                                    <div>type - {{type}}</div>
+                                </div>
+                                <hr>
+                                {{/each}}
+                                {{/if}}
+
+                                <div>
+                                    {{#with guide}}
+                                    <div>name - {{name}}</div>
+                                    <div>language - {{language}}</div>
+                                    <div>rating - {{rating}}</div>
+                                    {{/with}}
+                                </div>
+
+                            </div>
+                            {{/with}}
+
+                        </li>
+                        <br>
+                        <hr>
+                        <hr>
                     </ul>
                     {{/each}}
-                  </div>
-
-                </div>
-                <hr>
-                {{/with}}
-                {{/if}}
-
-                {{#if venue}}
-                {{#with venue}}
-                <div>
-
-                  <div>name - {{name}}</div>
-
-                  <address>
-                    {{#each location}}
-                    {{this}}
-                    {{/each}}
-                  </address>
-
-                </div>
-                <hr>
-                {{/with}}
-                {{/if}}
-
-
-
-                {{#if performers}}
-                {{#each performers}}
-                <div>
-                  <div>name - {{name}}</div>
-                  <div>type - {{type}}</div>
-                </div>
-                <hr>
-                {{/each}}
-                {{/if}}
-
-                <div>
-                  {{#with guide}}
-                  <div>name - {{name}}</div>
-                  <div>language - {{language}}</div>
-                  <div>rating - {{rating}}</div>
-                  {{/with}}
                 </div>
 
-              </div>
-              {{/with}}
-
-            </li>
-            <br>
-            <hr>
-            <hr>
-          </ul>
-          {{/each}}
-        </div>
-
-      </div>
-      {{/with}}
-    </section>
-    {{/with}}
-  </main>
+            </div>
+            {{/with}}
+        </section>
+        {{/with}}
+    </main>
 </div>
