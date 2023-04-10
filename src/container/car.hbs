@@ -1,0 +1,215 @@
+<main>
+    <section>
+        <h2>{{make}} {{model}} {{year}}
+            {{>secondary noLine=true name=color noDiv=true}}
+        </h2><br>
+
+        <div>
+
+            <div>
+                {{#with features}}
+                <div>
+
+                    {{#with interior}}
+
+                    {{>light name='interior' noLine=true sq=true}} <br>
+
+                    <div>
+
+                        {{>warning name='seats' noLine=true sq=true}}
+
+                        {{#with seats}}
+
+                        {{>primary name='material' data=material}}
+                        {{>dark name='color' data=color}}
+                        {{>success name='heated' data=heated}}
+                        {{>success name='ventilated' data=ventilated}}
+
+                        {{/with}}
+
+                    </div><br>
+
+                    <div>
+
+                        {{>warning name='dashboard' noLine=true sq=true}}
+
+                        {{#with dashboard}}
+
+                        {{>primary name='material' data=material}}
+                        {{>dark name='color' data=color}}
+
+                        <div>
+                            <details>
+
+                                <summary>{{>info name='display' noLine=true sq=true noDiv=true}}</summary>
+
+                                {{#with display}}
+
+                                {{>secondary name='type' data=type}}
+                                {{>danger name='size' data=size}}
+                                {{>secondary name='resolution' data=resolution}}
+                                {{>success name='touchscreen' data=touchscreen}}
+
+                                {{/with}}
+
+                            </details>
+                        </div><br>
+
+                        {{/with}}
+
+                    </div>
+
+                    <div>
+
+                        {{>warning name='dashboard' noLine=true sq=true}}
+
+                        {{#with audio}}
+                        {{>secondary name='system' data=system}}
+                        {{>danger name='speakers' data=speakers}}
+                        {{>success name='subwoofer' data=subwoofer}}
+                        {{>success name='bluetooth' data=bluetooth}}
+                        {{>success name='USB' data=USB}}
+                        {{/with}}
+
+                    </div>
+
+                    {{/with}}
+
+                </div><br>
+
+                <div>
+
+                    {{#with exterior}}
+                    <div>
+
+                        {{>light name='exterior' noLine=true sq=true}} <br>
+
+                        <div>
+
+                            {{>warning name='wheels' noLine=true sq=true}}
+
+                            {{#with wheels}}
+                            {{>danger name='size' data=size}}
+                            {{>secondary name='type' data=type}}
+                            {{>secondary name='color' data=color}}
+                            {{/with}}
+                        </div><br>
+
+                        <div>
+
+                            {{>warning name='headlights' noLine=true sq=true}}
+
+                            {{#with headlights}}
+                            {{>secondary name='type' data=type}}
+                            {{>danger name='brightness' data=tbrightnesspe}}
+                            {{>success name='automatic' data=automatic}}
+                            {{/with}}
+                        </div><br>
+
+                        <div>
+
+                            {{>warning name='sunroof' noLine=true sq=true}}
+
+                            {{#with sunroof}}
+                            {{>secondary name='type' data=type}}
+                            {{>danger name='size' data=size}}
+                            {{>success name='automatic' data=automatic}}
+                            {{/with}}
+                        </div>
+
+
+
+                    </div><br>
+                    {{/with}}
+
+                    <div>
+                        {{#with safety}}
+
+                        {{>light name='safety' noLine=true sq=true}} <br>
+
+                        <div>
+
+                            {{>warning name='airbags' noLine=true sq=true}}
+
+                            {{#with assistance}}
+                            {{>success name='blind spot monitoring' data=blind_spot_monitoring}}
+                            {{>success name='rear cross traffic alert' data=rear_cross_traffic_alert}}
+                            {{>success name='lane departure warning' data=lane_departure_warning}}
+                            {{>success name='adaptive cruise control' data=adaptive_cruise_control}}
+                            {{>success name='collision warning' data=collision_warning}}
+                            {{/with}}
+                        </div> <br>
+
+                        {{/with}}
+                    </div>
+
+                </div>
+
+                {{/with}}
+            </div>
+
+            <div>
+
+                {{>light name='engine' noLine=true sq=true}} <br>
+
+                {{#with engine}}
+
+                {{>secondary name='type' data=type}}
+                {{>danger name='displacement' data=displacement}}
+                {{>danger name='horsepower' data=horsepower}}
+                {{>danger name='torque' data=torque}} <br>
+
+                <div>
+
+                    {{>warning name='transmission' noLine=true sq=true}}
+
+                    {{#with transmission}}
+                    {{>secondary name='type' data=type}}
+                    {{>danger name='gears' data=gears}}
+                    {{/with}}
+                </div>
+
+                {{/with}}
+            </div><br>
+
+            <div>
+
+                {{>light name='fuel economy' noLine=true sq=true}} <br>
+
+                {{#with fuel_economy}}
+                {{>danger name='city' data=city}}
+                {{>danger name='highway' data=highway}}
+                {{>danger name='combined' data=combined}}
+                {{/with}}
+
+            </div>
+
+            <div>
+
+                {{>light name='price' noLine=true sq=true}} <br>
+
+                {{#with price}}
+
+                {{>secondary name='base' data=base}}
+                {{>danger name='destination' data=destination}}<br>
+
+                <div>
+
+                    {{>warning name='options' noLine=true sq=true}}
+
+                    {{#with options}}
+                    {{>danger name='navigation' data=navigation}}
+                    {{>danger name='moonroof' data=moonroof}}
+                    {{>danger name='premium paint' data=premium_paint}}
+                    {{/with}}
+                </div>
+
+                {{>danger name='total' data=total}}
+
+                {{/with}}
+            </div>
+
+        </div>
+
+    </section>
+</main>
