@@ -1,0 +1,134 @@
+<div>
+    <main>
+        <section>
+
+            <h2>{{> warning name=name noLine=true}}</h2>
+
+            {{>info name='description' data=description}}
+
+            <div>
+                {{#with history}}
+
+                {{>secondary name='year' data=year}}
+
+                {{>success name='founder' data=founder}}
+
+                {{/with}}
+            </div><br>
+
+            <div>
+                <details>
+                    <summary>{{>dark name='types' noLine=true noDiv=true}}</summary>
+                    {{#each types}}
+                    <ul>
+                        <li>
+                            <div>
+                                {{this}}
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+            </div><br>
+
+            <div>
+                {{#with syntax}}
+
+                <div>{{>danger name='syntax' noDiv=true}}
+                    {{#each variables}}
+                    {{this}},
+                    {{/each}}
+                </div>
+
+                <div>{{>danger name='functions' noDiv=true}}
+                    {{#each functions}}
+                    {{this}},
+                    {{/each}}
+                </div>
+
+                <div>{{>danger name='conditionals' noDiv=true}}
+                    {{#each conditionals}}
+                    {{this}},
+                    {{/each}}
+                </div>
+
+                <div>{{>danger name='loops' noDiv=true}}
+                    {{#each loops}}
+                    {{this}},
+                    {{/each}}
+                </div>
+
+                <div>{{>danger name='classes' noDiv=true}}
+                    {{#each classes}}
+                    {{this}},
+                    {{/each}}
+                </div>
+
+                {{/with}}
+            </div><br>
+
+            <div>
+                <details>
+                    <summary>{{>dark name='features' noLine=true noDiv=true}}</summary>
+                    <br>
+                    {{#each features}}
+                    <ul>
+                        <li>
+                            <div>
+                                {{this}}
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+            </div>
+
+            <div>
+                <details>
+                    <summary>{{>dark name='libraries' noLine=true noDiv=true}}</summary>
+                    <br>
+                    {{#each libraries}}
+                    <ul>
+                        <li>
+                            <div>
+                                {{this}}
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+            </div>
+
+            <div>
+                <details>
+                    <summary>{{>dark name='tools' noLine=true noDiv=true}}</summary>
+                    <br>
+                    {{#each tools}}
+                    <ul>
+                        <li>
+                            <div>
+                                {{this}}
+                            </div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                </details>
+            </div>
+
+            <br>
+            <div>
+                {{>info noLine=true name='community'}}
+                {{#each community}}
+                <ul>
+                    <li>
+                        {{>primary name='name' data=name}}
+                        {{>primary name='type' data=type}}
+                    </li>
+                    <br>
+                </ul>
+                {{/each}}
+            </div>
+
+        </section>
+    </main>
+</div>
