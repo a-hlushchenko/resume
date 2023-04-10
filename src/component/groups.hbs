@@ -1,0 +1,30 @@
+{{#if groups}}
+<div>
+    {{>warning name='groups' noLine=true sq=true}}
+    {{#each groups}}
+    <ul>
+        <li>
+
+            {{>warning name='group' noLine=true sq=true}}
+
+            {{>danger name='id' data=id}}
+
+            {{>danger name='name' data=name}}
+
+            {{>danger name='description' data=description}} <br>
+
+            <div>
+                {{#each members}}
+
+                {{>warning name='member' noLine=true sq=true}}
+                {{>user}}
+
+                {{/each}}
+            </div>
+
+        </li><br>
+    </ul>
+    {{/each}}
+</div>
+
+{{/if}}
