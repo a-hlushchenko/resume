@@ -19,8 +19,8 @@
 
                         {{#if mutual_friends}}
                         <div>
-                            {{#each mutual_friends}}
                             <ul>
+                                {{#each mutual_friends}}
                                 <li>
 
                                     {{>warning name='mutual friend' noLine=true sq=true}}
@@ -34,8 +34,8 @@
                                     </div>
 
                                 </li>
+                                {{/each}}
                             </ul>
-                            {{/each}}
                         </div>
                         {{/if}}
                         {{>groups}}

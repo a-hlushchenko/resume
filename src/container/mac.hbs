@@ -92,8 +92,8 @@
 
             <div>
                 {{>warning name='ports' noLine=true sq=true}}
-                {{#each ports}}
                 <ul>
+                    {{#each ports}}
                     <li>
 
                         {{>secondary name='type' data=type}}
@@ -117,8 +117,8 @@
                         {{/if}}
 
                     </li><br>
+                    {{/each}}
                 </ul>
-                {{/each}}
             </div>
 
             {{#with battery}}
@@ -152,8 +152,8 @@
             {{>danger name='operating system' data=operating_system}} <br>
 
             <div>
-                {{#each accessories}}
                 <ul>
+                    {{#each accessories}}
                     <li>
 
                         {{>warning name='accessories' noLine=true sq=true}}
@@ -163,8 +163,8 @@
                         {{>danger name='price' data=price}}
 
                     </li> <br>
+                    {{/each}}
                 </ul>
-                {{/each}}
             </div>
 
         </div>

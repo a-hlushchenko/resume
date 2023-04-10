@@ -19,15 +19,15 @@
             <div>
                 <details>
                     <summary>{{>dark name='types' noLine=true noDiv=true}}</summary>
-                    {{#each types}}
                     <ul>
+                        {{#each types}}
                         <li>
                             <div>
                                 {{this}}
                             </div>
                         </li>
+                        {{/each}}
                     </ul>
-                    {{/each}}
                 </details>
             </div><br>
 
@@ -71,15 +71,15 @@
                 <details>
                     <summary>{{>dark name='features' noLine=true noDiv=true}}</summary>
                     <br>
-                    {{#each features}}
                     <ul>
+                        {{#each features}}
                         <li>
                             <div>
                                 {{this}}
                             </div>
                         </li>
+                        {{/each}}
                     </ul>
-                    {{/each}}
                 </details>
             </div>
 
@@ -87,15 +87,15 @@
                 <details>
                     <summary>{{>dark name='libraries' noLine=true noDiv=true}}</summary>
                     <br>
-                    {{#each libraries}}
                     <ul>
+                        {{#each libraries}}
                         <li>
                             <div>
                                 {{this}}
                             </div>
                         </li>
+                        {{/each}}
                     </ul>
-                    {{/each}}
                 </details>
             </div>
 
@@ -103,30 +103,30 @@
                 <details>
                     <summary>{{>dark name='tools' noLine=true noDiv=true}}</summary>
                     <br>
-                    {{#each tools}}
                     <ul>
+                        {{#each tools}}
                         <li>
                             <div>
                                 {{this}}
                             </div>
                         </li>
+                        {{/each}}
                     </ul>
-                    {{/each}}
                 </details>
             </div>
 
             <br>
             <div>
                 {{>info noLine=true name='community'}}
-                {{#each community}}
                 <ul>
+                    {{#each community}}
                     <li>
                         {{>primary name='name' data=name}}
                         {{>primary name='type' data=type}}
                     </li>
                     <br>
+                    {{/each}}
                 </ul>
-                {{/each}}
             </div>
 
         </section>
