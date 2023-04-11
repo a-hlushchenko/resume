@@ -3,7 +3,7 @@
     {{/unless}}
 
 
-    <span class="badge {{#unless sq}}rounded-pill {{/unless}}text-bg-primary">
+    <span class="badge {{#unless sq}}rounded-pill {{/unless}}text-bg-{{color}}">
         {{name}}
     </span>
 
@@ -11,7 +11,9 @@
     -
     {{/unless}}
 
+    {{#if data}}
     {{data}}
+    {{/if}}
 
     {{#unless noDiv}}
 </div>

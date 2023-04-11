@@ -1,7 +1,7 @@
 <main>
     <section>
         <h2>{{make}} {{model}} {{year}}
-            {{>secondary noLine=true name=color noDiv=true}}
+            {{>text color='secondary' noLine=true name=color noDiv=true}}
         </h2><br>
 
         <div>
@@ -12,18 +12,18 @@
 
                     {{#with interior}}
 
-                    {{>light name='interior' noLine=true sq=true}} <br>
+                    {{>text color='light' name='interior' noLine=true sq=true}} <br>
 
                     <div>
 
-                        {{>warning name='seats' noLine=true sq=true}}
+                        {{>text color='warning' name='seats' noLine=true sq=true}}
 
                         {{#with seats}}
 
-                        {{>primary name='material' data=material}}
-                        {{>dark name='color' data=color}}
-                        {{>success name='heated' data=heated}}
-                        {{>success name='ventilated' data=ventilated}}
+                        {{>text color='primary' name='material' data=material}}
+                        {{>text color='dark' name='color' data=color}}
+                        {{>text color='success' name='heated' data=heated}}
+                        {{>text color='success' name='ventilated' data=ventilated}}
 
                         {{/with}}
 
@@ -31,24 +31,24 @@
 
                     <div>
 
-                        {{>warning name='dashboard' noLine=true sq=true}}
+                        {{>text color='warning' name='dashboard' noLine=true sq=true}}
 
                         {{#with dashboard}}
 
-                        {{>primary name='material' data=material}}
-                        {{>dark name='color' data=color}}
+                        {{>text color='primary' name='material' data=material}}
+                        {{>text color='dark' name='color' data=color}}
 
                         <div>
                             <details>
 
-                                <summary>{{>info name='display' noLine=true sq=true noDiv=true}}</summary>
+                                <summary>{{>text color='info' name='display' noLine=true sq=true noDiv=true}}</summary>
 
                                 {{#with display}}
 
-                                {{>secondary name='type' data=type}}
-                                {{>danger name='size' data=size}}
-                                {{>secondary name='resolution' data=resolution}}
-                                {{>success name='touchscreen' data=touchscreen}}
+                                {{>text color='secondary' name='type' data=type}}
+                                {{>text color='danger' name='size' data=size}}
+                                {{>text color='secondary' name='resolution' data=resolution}}
+                                {{>text color='success' name='touchscreen' data=touchscreen}}
 
                                 {{/with}}
 
@@ -61,14 +61,14 @@
 
                     <div>
 
-                        {{>warning name='dashboard' noLine=true sq=true}}
+                        {{>text color='warning' name='dashboard' noLine=true sq=true}}
 
                         {{#with audio}}
-                        {{>secondary name='system' data=system}}
-                        {{>danger name='speakers' data=speakers}}
-                        {{>success name='subwoofer' data=subwoofer}}
-                        {{>success name='bluetooth' data=bluetooth}}
-                        {{>success name='USB' data=USB}}
+                        {{>text color='secondary' name='system' data=system}}
+                        {{>text color='danger' name='speakers' data=speakers}}
+                        {{>text color='success' name='subwoofer' data=subwoofer}}
+                        {{>text color='success' name='bluetooth' data=bluetooth}}
+                        {{>text color='success' name='USB' data=USB}}
                         {{/with}}
 
                     </div>
@@ -82,38 +82,38 @@
                     {{#with exterior}}
                     <div>
 
-                        {{>light name='exterior' noLine=true sq=true}} <br>
+                        {{>text color='light' name='exterior' noLine=true sq=true}} <br>
 
                         <div>
 
-                            {{>warning name='wheels' noLine=true sq=true}}
+                            {{>text color='warning' name='wheels' noLine=true sq=true}}
 
                             {{#with wheels}}
-                            {{>danger name='size' data=size}}
-                            {{>secondary name='type' data=type}}
-                            {{>secondary name='color' data=color}}
+                            {{>text color='danger' name='size' data=size}}
+                            {{>text color='secondary' name='type' data=type}}
+                            {{>text color='secondary' name='color' data=color}}
                             {{/with}}
                         </div><br>
 
                         <div>
 
-                            {{>warning name='headlights' noLine=true sq=true}}
+                            {{>text color='warning' name='headlights' noLine=true sq=true}}
 
                             {{#with headlights}}
-                            {{>secondary name='type' data=type}}
-                            {{>danger name='brightness' data=tbrightnesspe}}
-                            {{>success name='automatic' data=automatic}}
+                            {{>text color='secondary' name='type' data=type}}
+                            {{>text color='danger' name='brightness' data=tbrightnesspe}}
+                            {{>text color='success' name='automatic' data=automatic}}
                             {{/with}}
                         </div><br>
 
                         <div>
 
-                            {{>warning name='sunroof' noLine=true sq=true}}
+                            {{>text color='warning' name='sunroof' noLine=true sq=true}}
 
                             {{#with sunroof}}
-                            {{>secondary name='type' data=type}}
-                            {{>danger name='size' data=size}}
-                            {{>success name='automatic' data=automatic}}
+                            {{>text color='secondary' name='type' data=type}}
+                            {{>text color='danger' name='size' data=size}}
+                            {{>text color='success' name='automatic' data=automatic}}
                             {{/with}}
                         </div>
 
@@ -125,18 +125,18 @@
                     <div>
                         {{#with safety}}
 
-                        {{>light name='safety' noLine=true sq=true}} <br>
+                        {{>text color='light' name='safety' noLine=true sq=true}} <br>
 
                         <div>
 
-                            {{>warning name='airbags' noLine=true sq=true}}
+                            {{>text color='warning' name='airbags' noLine=true sq=true}}
 
                             {{#with assistance}}
-                            {{>success name='blind spot monitoring' data=blind_spot_monitoring}}
-                            {{>success name='rear cross traffic alert' data=rear_cross_traffic_alert}}
-                            {{>success name='lane departure warning' data=lane_departure_warning}}
-                            {{>success name='adaptive cruise control' data=adaptive_cruise_control}}
-                            {{>success name='collision warning' data=collision_warning}}
+                            {{>text color='success' name='blind spot monitoring' data=blind_spot_monitoring}}
+                            {{>text color='success' name='rear cross traffic alert' data=rear_cross_traffic_alert}}
+                            {{>text color='success' name='lane departure warning' data=lane_departure_warning}}
+                            {{>text color='success' name='adaptive cruise control' data=adaptive_cruise_control}}
+                            {{>text color='success' name='collision warning' data=collision_warning}}
                             {{/with}}
                         </div> <br>
 
@@ -150,22 +150,22 @@
 
             <div>
 
-                {{>light name='engine' noLine=true sq=true}} <br>
+                {{>text color='light' name='engine' noLine=true sq=true}} <br>
 
                 {{#with engine}}
 
-                {{>secondary name='type' data=type}}
-                {{>danger name='displacement' data=displacement}}
-                {{>danger name='horsepower' data=horsepower}}
-                {{>danger name='torque' data=torque}} <br>
+                {{>text color='secondary' name='type' data=type}}
+                {{>text color='danger' name='displacement' data=displacement}}
+                {{>text color='danger' name='horsepower' data=horsepower}}
+                {{>text color='danger' name='torque' data=torque}} <br>
 
                 <div>
 
-                    {{>warning name='transmission' noLine=true sq=true}}
+                    {{>text color='warning' name='transmission' noLine=true sq=true}}
 
                     {{#with transmission}}
-                    {{>secondary name='type' data=type}}
-                    {{>danger name='gears' data=gears}}
+                    {{>text color='secondary' name='type' data=type}}
+                    {{>text color='danger' name='gears' data=gears}}
                     {{/with}}
                 </div>
 
@@ -174,37 +174,37 @@
 
             <div>
 
-                {{>light name='fuel economy' noLine=true sq=true}} <br>
+                {{>text color='light' name='fuel economy' noLine=true sq=true}} <br>
 
                 {{#with fuel_economy}}
-                {{>danger name='city' data=city}}
-                {{>danger name='highway' data=highway}}
-                {{>danger name='combined' data=combined}}
+                {{>text color='danger' name='city' data=city}}
+                {{>text color='danger' name='highway' data=highway}}
+                {{>text color='danger' name='combined' data=combined}}
                 {{/with}}
 
             </div>
 
             <div>
 
-                {{>light name='price' noLine=true sq=true}} <br>
+                {{>text color='light' name='price' noLine=true sq=true}} <br>
 
                 {{#with price}}
 
-                {{>secondary name='base' data=base}}
-                {{>danger name='destination' data=destination}}<br>
+                {{>text color='secindary' name='base' data=base}}
+                {{>text color='danger' name='destination' data=destination}}<br>
 
                 <div>
 
-                    {{>warning name='options' noLine=true sq=true}}
+                    {{>text color='warning' name='options' noLine=true sq=true}}
 
                     {{#with options}}
-                    {{>danger name='navigation' data=navigation}}
-                    {{>danger name='moonroof' data=moonroof}}
-                    {{>danger name='premium paint' data=premium_paint}}
+                    {{>text color='danger' name='navigation' data=navigation}}
+                    {{>text color='danger' name='moonroof' data=moonroof}}
+                    {{>text color='danger' name='premium paint' data=premium_paint}}
                     {{/with}}
                 </div>
 
-                {{>danger name='total' data=total}}
+                {{>text color='danger' name='total' data=total}}
 
                 {{/with}}
             </div>

@@ -1,22 +1,22 @@
 {{#if groups}}
 <div>
-    {{>warning name='groups' noLine=true sq=true}}
+    {{>text color='warning' name='groups' noLine=true sq=true}}
     {{#each groups}}
     <ul>
         <li>
 
-            {{>warning name='group' noLine=true sq=true}}
+            {{>text color='warning' name='group' noLine=true sq=true}}
 
-            {{>danger name='id' data=id}}
+            {{>text color='danger' name='id' data=id}}
 
-            {{>danger name='name' data=name}}
+            {{>text color='danger' name='name' data=name}}
 
-            {{>danger name='description' data=description}} <br>
+            {{>text color='warning' name='description' data=description}} <br>
 
             <div>
                 {{#each members}}
 
-                {{>warning name='member' noLine=true sq=true}}
+                {{>text color='warning' name='member' noLine=true sq=true}}
                 {{>user}}
 
                 {{/each}}

@@ -2,23 +2,23 @@
     <main>
         <section>
 
-            <h2>{{> warning name=name noLine=true}}</h2>
+            <h2>{{> text color='warning' name=name noLine=true}}</h2>
 
-            {{>info name='description' data=description}}
+            {{>text color='info' name='description' data=description}}
 
             <div>
                 {{#with history}}
 
-                {{>secondary name='year' data=year}}
+                {{>text color='secondary' name='year' data=year}}
 
-                {{>success name='founder' data=founder}}
+                {{>text color='success' name='founder' data=founder}}
 
                 {{/with}}
             </div><br>
 
             <div>
                 <details>
-                    <summary>{{>dark name='types' noLine=true noDiv=true}}</summary>
+                    <summary>{{>text color='dark' name='types' noLine=true noDiv=true}}</summary>
                     <ul>
                         {{#each types}}
                         <li>
@@ -34,31 +34,31 @@
             <div>
                 {{#with syntax}}
 
-                <div>{{>danger name='syntax' noDiv=true}}
+                <div>{{>text color='danger' name='syntax' noDiv=true}}
                     {{#each variables}}
                     {{this}},
                     {{/each}}
                 </div>
 
-                <div>{{>danger name='functions' noDiv=true}}
+                <div>{{>text color='danger' name='functions' noDiv=true}}
                     {{#each functions}}
                     {{this}},
                     {{/each}}
                 </div>
 
-                <div>{{>danger name='conditionals' noDiv=true}}
+                <div>{{>text color='danger' name='conditionals' noDiv=true}}
                     {{#each conditionals}}
                     {{this}},
                     {{/each}}
                 </div>
 
-                <div>{{>danger name='loops' noDiv=true}}
+                <div>{{>text color='danger' name='loops' noDiv=true}}
                     {{#each loops}}
                     {{this}},
                     {{/each}}
                 </div>
 
-                <div>{{>danger name='classes' noDiv=true}}
+                <div>{{>text color='danger' name='classes' noDiv=true}}
                     {{#each classes}}
                     {{this}},
                     {{/each}}
@@ -69,7 +69,7 @@
 
             <div>
                 <details>
-                    <summary>{{>dark name='features' noLine=true noDiv=true}}</summary>
+                    <summary>{{>text color='dark' name='features' noLine=true noDiv=true}}</summary>
                     <br>
                     <ul>
                         {{#each features}}
@@ -85,7 +85,7 @@
 
             <div>
                 <details>
-                    <summary>{{>dark name='libraries' noLine=true noDiv=true}}</summary>
+                    <summary>{{>text color='dark' name='libraries' noLine=true noDiv=true}}</summary>
                     <br>
                     <ul>
                         {{#each libraries}}
@@ -101,7 +101,7 @@
 
             <div>
                 <details>
-                    <summary>{{>dark name='tools' noLine=true noDiv=true}}</summary>
+                    <summary>{{>text color='dark' name='tools' noLine=true noDiv=true}}</summary>
                     <br>
                     <ul>
                         {{#each tools}}
@@ -117,12 +117,12 @@
 
             <br>
             <div>
-                {{>info noLine=true name='community'}}
+                {{>text color='info' noLine=true name='community'}}
                 <ul>
                     {{#each community}}
                     <li>
-                        {{>primary name='name' data=name}}
-                        {{>primary name='type' data=type}}
+                        {{>text color='primary' name='name' data=name}}
+                        {{>text color='primary' name='type' data=type}}
                     </li>
                     <br>
                     {{/each}}

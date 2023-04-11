@@ -3,11 +3,11 @@
 
         {{>title data=name noLine=true big=true}}
 
-        {{>info name='description' data=description}}
+        {{>text color='info' name='description' data=description}}
 
-        {{>danger name='descripriception' data=price}}
+        {{>text color='danger' name='descripriception' data=price}}
 
-        {{>secondary name='category' data=category}} <br>
+        {{>text color='secondary' name='category' data=category}} <br>
 
         {{#with features}}
         <div>
@@ -15,17 +15,17 @@
             {{#with processor}}
             <div>
 
-                {{>warning name='processor' noLine=true sq=true}}
+                {{>text color='warning' name='processor' noLine=true sq=true}}
 
-                {{>primary name='brand' data=brand}}
+                {{>text color='primary' name='brand' data=brand}}
 
-                {{>info name='model' data=model}}
+                {{>text color='info' name='model' data=model}}
 
-                {{>secondary name='speed' data=speed}}
+                {{>text color='secondary' name='speed' data=speed}}
 
-                {{>danger name='cores' data=cores}}
+                {{>text color='danger' name='cores' data=cores}}
 
-                {{>secondary name='cache' data=cache}}
+                {{>text color='secondary' name='cache' data=cache}}
 
             </div><br>
             {{/with}}
@@ -33,13 +33,13 @@
             {{#with memory}}
             <div>
 
-                {{>warning name='memory' noLine=true sq=true}}
+                {{>text color='warning' name='memory' noLine=true sq=true}}
 
-                {{>secondary name='type' data=brantyped}}
+                {{>text color='secondary' name='type' data=brantyped}}
 
-                {{>danger name='size' data=size}}
+                {{>text color='secondary' name='size' data=size}}
 
-                {{>danger name='speed' data=speed}}
+                {{>text color='danger' name='speed' data=speed}}
 
             </div><br>
             {{/with}}
@@ -47,11 +47,11 @@
             {{#with storage}}
             <div>
 
-                {{>warning name='storage' noLine=true sq=true}}
+                {{>text color='warning' name='storage' noLine=true sq=true}}
 
-                {{>secondary name='type' data=type}}
+                {{>text color='secondary' name='type' data=type}}
 
-                {{>danger name='size' data=size}}
+                {{>text color='danger' name='size' data=size}}
 
             </div><br>
             {{/with}}
@@ -59,19 +59,19 @@
             {{#with display}}
             <div>
 
-                {{>warning name='display' noLine=true sq=true}}
+                {{>text color='warning' name='display' noLine=true sq=true}}
 
-                {{>danger name='size' data=size}}
+                {{>text color='danger' name='size' data=size}}
 
-                {{>secondary name='resolution' data=resolution}}
+                {{>text color='secondary' name='resolution' data=resolution}}
 
-                {{>info name='technology' data=technology}}
+                {{>text color='secondary' name='technology' data=technology}}
 
-                {{>dark name='color space' data=color_space}}
+                {{>text color='dark' name='color space' data=color_space}}
 
-                {{>danger name='brightness' data=brightness}}
+                {{>text color='danger' name='brightness' data=brightness}}
 
-                {{>danger name='trefresh rateype' data=trefresh_rateype}}
+                {{>text color='danger' name='trefresh rateype' data=trefresh_rateype}}
 
             </div><br>
             {{/with}}
@@ -79,30 +79,30 @@
             {{#with graphics}}
             <div>
 
-                {{>warning name='graphics' noLine=true sq=true}}
+                {{>text color='warning' name='graphics' noLine=true sq=true}}
 
-                {{>primary name='brand' data=brand}}
+                {{>text color='primary' name='brand' data=brand}}
 
-                {{>info name='model' data=smodelize}}
+                {{>text color='info' name='model' data=smodelize}}
 
-                {{>danger name='memory' data=memory}}
+                {{>text color='danger' name='memory' data=memory}}
 
             </div><br>
             {{/with}}
 
             <div>
-                {{>warning name='ports' noLine=true sq=true}}
+                {{>text color='warning' name='ports' noLine=true sq=true}}
                 <ul>
                     {{#each ports}}
                     <li>
 
-                        {{>secondary name='type' data=type}}
+                        {{>text color='secondary' name='type' data=type}}
 
-                        {{>danger name='count' data=count}} <br>
+                        {{>text color='danger' name='count' data=count}} <br>
 
                         {{#if features}}
                         <div>
-                            {{>warning name='features' noLine=true sq=true}}
+                            {{>text color='warning' name='features' noLine=true sq=true}}
 
 
                             {{#each features}}
@@ -124,43 +124,43 @@
             {{#with battery}}
             <div>
 
-                {{>warning name='battery' noLine=true sq=true}}
+                {{>text color='warning' name='battery' noLine=true sq=true}}
 
-                {{>info name='type' data=type}}
+                {{>text color='info' name='type' data=type}}
 
-                {{>danger name='capacity' data=capacity}}
+                {{>text color='danger' name='capacity' data=capacity}}
 
-                {{>secondary name='life' data=life}}
+                {{>text color='secondary' name='life' data=life}}
             </div>
             {{/with}} <br>
 
-            {{>danger name='weight' data=weight}} <br>
+            {{>text color='danger' name='weight' data=weight}} <br>
 
             {{#with dimensions}}
             <div>
 
-                {{>warning name='dimensions' noLine=true sq=true}}
+                {{>text color='warning' name='dimensions' noLine=true sq=true}}
 
-                {{>secondary name='height' data=height}}
+                {{>text color='secondary' name='height' data=height}}
 
-                {{>secondary name='width' data=width}}
+                {{>text color='secondary' name='width' data=width}}
 
-                {{>secondary name='depth' data=depth}}
+                {{>text color='secondary' name='depth' data=depth}}
             </div>
             {{/with}} <br>
 
-            {{>danger name='operating system' data=operating_system}} <br>
+            {{>text color='danger' name='operating system' data=operating_system}} <br>
 
             <div>
                 <ul>
                     {{#each accessories}}
                     <li>
 
-                        {{>warning name='accessories' noLine=true sq=true}}
+                        {{>text color='warning' name='accessories' noLine=true sq=true}}
 
-                        {{>primary name='name' data=name}}
+                        {{>text color='primary' name='name' data=name}}
 
-                        {{>danger name='price' data=price}}
+                        {{>text color='danger' name='price' data=price}}
 
                     </li> <br>
                     {{/each}}

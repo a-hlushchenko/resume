@@ -4,17 +4,17 @@
         {{>title big=true noLine=true data=name}}
 
         <div>
-            {{>warning name='users' noLine=true sq=true}}
+            {{>text color='warning' name='users' noLine=true sq=true}}
             {{#each users}}
             <ul>
                 <li>
-                    {{>warning name='user' noLine=true sq=true}}
+                    {{>text color='warning' name='user' noLine=true sq=true}}
                     {{>user}}
 
                     <div>
                         {{#each friends}}
 
-                        {{>warning name='friends' noLine=true sq=true}}
+                        {{>text color='warning' name='friends' noLine=true sq=true}}
                         {{>user}}
 
                         {{#if mutual_friends}}
@@ -23,11 +23,11 @@
                                 {{#each mutual_friends}}
                                 <li>
 
-                                    {{>warning name='mutual friend' noLine=true sq=true}}
+                                    {{>text color='warning' name='mutual friend' noLine=true sq=true}}
                                     {{>user}}
 
                                     <div>
-                                        {{>warning name='mutual friend' noLine=true sq=true}}
+                                        {{>text color='warning' name='mutual friend' noLine=true sq=true}}
                                         {{#each mutual_friends}}
                                         {{>user}}
                                         {{/each}}
