@@ -1,0 +1,21 @@
+{{#with data}}
+<div class="card card-body">
+
+    <h1>{{title}}</h1>
+
+    <p>{{text}}</p>
+
+    {{#with button_text}}
+    <div>
+        <div>
+            <button class="btn btn-{{color}}">{{solid}}</button>
+        </div>
+
+        <div>
+            <button class="btn btn-outline-{{color}}">{{outline}}</button>
+        </div>
+    </div>
+    {{/with}}
+
+</div>
+{{/with}}
