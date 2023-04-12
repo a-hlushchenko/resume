@@ -1,5 +1,5 @@
 html {
-  max-width: 720px;
+  max-width: 780px;
 }
 
 body {
@@ -21,3 +21,7 @@ section {
 div {
   margin: 20px 0;
 }
+.mylist div {
+  margin: 0;
+}
+

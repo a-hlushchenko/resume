@@ -1,80 +1,276 @@
 <main>
 
-    <div class="card card-body">
+    <div class="row gx-2 gy-3">
+        {{!-- ТЕКСТ ТА КНОПКИ --}}
+        <section class="col-12">
+            <div class="card card-body">
 
-        <h1>title 1</h1>
+                <h1>title 1</h1>
 
-        <h3>title 3</h3>
+                <h3>title 3</h3>
 
-        <h6>title 6</h6>
+                <h6>title 6</h6>
 
-    </div>
+            </div>
+        </section>
 
-    <div class="card card-body">
+        <section class="col-12">
+            <div class="card card-body">
 
-        <div class='display-1'>title</div>
+                <div class='display-1'>title</div>
 
-        <div class='display-3'>title</div>
+                <div class='display-3'>title</div>
 
-        <div class='display-6'>title</div>
+                <div class='display-6'>title</div>
 
-    </div>
+            </div>
+        </section>
 
-    <div class="card card-body">
+        <section class="col-12">
+            <div class="card card-body">
 
-        <div class="text-center">text center</div>
+                <div class="text-center">text center</div>
 
-        <div class="text-end">text end</div>
+                <div class="text-end">text end</div>
 
-        <div class="text-muted">text muted</div>
+                <div class="text-muted">text muted</div>
 
-    </div>
+            </div>
+        </section>
 
-    <div class="card card-body">
+        <section class="col-12">
+            <div class="card card-body">
 
-        <div class="display-6 text-uppercase">текст великими буквами</div>
+                <div class="display-6 text-uppercase">текст великими буквами</div>
 
-        <div class="display-6 text-lower">текст маленькими буквами</div>
+                <div class="display-6 text-lower">текст маленькими буквами</div>
 
-        <div class="display-6 text-capitalize">слова з великої букви</div>
+                <div class="display-6 text-capitalize">слова з великої букви</div>
 
-    </div>
+            </div>
+        </section>
 
-    <div class="card">
+        <section class="col-12">
+            <div class="card">
 
-        <div class="card-body">
+                <div class="card-body">
 
-            <button class="btn btn-primary">button</button>
+                    <button class="btn btn-primary">button</button>
 
-            <button class="btn btn-secondary">button</button>
+                    <button class="btn btn-secondary">button</button>
 
-            <button class="btn btn-outline-primary">button</button>
+                    <button class="btn btn-outline-primary">button</button>
 
-            <button class="btn btn-primary btn-lg">button</button>
+                    <button class="btn btn-primary btn-lg">button</button>
 
-            <button class="btn btn-primary btn-sm">button</button>
+                    <button class="btn btn-primary btn-sm">button</button>
 
-        </div>
+                </div>
 
-    </div>
+            </div>
+        </section>
 
-    <div class="card card-body">
+        <section class="col-12">
+            <div class="card card-body">
 
-        <div class="text-primary">text primary</div>
+                <div class="text-primary">text primary</div>
 
-        <div class="text-secondary">text secondary</div>
+                <div class="text-secondary">text secondary</div>
 
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam quam facere, nihil voluptate ipsam
-            odio cum expedita optio fugit
-            <span class="text-primary">repellendus obcaecati accusantium officia, rem deserunt unde eaque</span>
-            Vel, neque aperiam?
-        </p>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam quam facere, nihil voluptate
+                    ipsam
+                    odio cum expedita optio fugit
+                    <span class="text-primary">repellendus obcaecati accusantium officia, rem deserunt unde eaque</span>
+                    Vel, neque aperiam?
+                </p>
 
-    </div>
+            </div>
+        </section>
 
-    <div class="card card-body">
-        This is content
+        <section class="col-12">
+            <div class="card card-body">
+                This is content
+            </div>
+        </section>
+
+        {{!-- КАРТОЧКИ, ТАБЛИЦІ --}}
+
+        <section class="col-12">
+            <div class="card mycard text-bg-secondary">
+
+                <img class="img-top" src="https://picsum.photos/500/250" alt="picture">
+
+                <div class="card-body">
+
+                    <div class="card-title display-6">product</div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <a href="/mac" class="btn btn-primary">button</a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="col-4 mylist">
+            <div class="card ">
+
+                <div class="card-header text-bg-info">
+
+                    <h6>menu</h6>
+
+                </div>
+
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item">
+                        <a href="/mac">mac</a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a href="/car">car</a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a href="/js">java script</a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a href="/facebook">facebook</a>
+                    </li>
+
+                </ul>
+
+                <div class="card-footer">
+                    <button class="btn btn-dark btn-sm">update list</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="col-8">
+            <table class="table table-bordered table-striped">
+
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>firstname</th>
+                        <th>lastname</th>
+                        <th>age</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Anton</td>
+                        <td>Hlushchenko</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Danya</td>
+                        <td>Hlushchenko</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Anton</td>
+                        <td>Hlushchenko</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Anton</td>
+                        <td>Hlushchenko</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Danya</td>
+                        <td>Hlushchenko</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Anton</td>
+                        <td>Hlushchenko</td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </section>
+
+        <section class="col-12">
+            <div class="row gx-2 gy-3">
+
+                <div class="col-4">
+                    <div class="card text-bg-secondary">
+                        <h5 class='card-header text-center'>Header</h5>
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Sub header</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card text-bg-secondary">
+                        <h5 class='card-header text-center'>Header</h5>
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Sub header</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card text-bg-secondary">
+                        <h5 class='card-header text-center'>Header</h5>
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Sub header</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="display-6">qwerty asdf</div>
+
+                <div class="col-4">
+                    <div class="card text-bg-secondary">
+                        <h5 class='card-header text-center'>Header</h5>
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Sub header</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card text-bg-secondary">
+                        <h5 class='card-header text-center'>Header</h5>
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Sub header</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card text-bg-secondary">
+                        <h5 class='card-header text-center'>Header</h5>
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Sub header</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </div>
 
 </main>
