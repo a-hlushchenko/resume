@@ -1,0 +1,38 @@
+<main>
+    <section>
+        <ul class="list-group mb-5">
+
+            {{#each list}}
+            <li class="list-group-item">
+
+                <span class="badge text-bg-primary">{{@key}}</span> {{#if @first}} <span
+                    class="badge text-bg-primary">first</span>
+                {{/if}}
+
+                {{#if @last}} <span class="badge text-bg-danger">last</span>
+                {{/if}}
+
+                <{{#if @first}}button disabled{{else}}span{{/if}}>
+                    {{name}}
+                </{{#if @last}}button{{else}}span{{/if}}>
+            </li>
+            {{/each}}
+        </ul>
+
+        <ul class="list-group">
+            {{#each user}}
+            <li class="list-group-item">
+
+                {{#if @first}} <span class="badge text-bg-primary">first</span>
+                {{/if}}
+
+                {{#if @last}} <span class="badge text-bg-danger">last</span>
+                {{/if}}
+
+                {{@key}}: {{#if value}}{{value}}{{else}}{{text}}{{/if}},
+
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>

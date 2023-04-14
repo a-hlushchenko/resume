@@ -1427,7 +1427,7 @@ router.get('/task31', function (req, res) {
 
 router.get('/shophome', function (req, res) {
     res.render('shophome', {
-        layout: 'basic',
+        layout: 'shop',
         navigation: {
             links: [
                 {
@@ -1705,6 +1705,35 @@ router.get('/shophome', function (req, res) {
                 },
             ],
         ],
+    })
+})
+
+
+router.get('/list', function (req, res) {
+    res.render('list', {
+        layout: 'basic',
+        list: [
+            { name: 'Anton' },
+            { name: 'Danya' },
+            { name: 'Dima' },
+            { name: 'Oleksandra' },
+        ],
+
+        user: {
+            name: {
+                value: 'Anton',
+                text: 'hello'
+            },
+            role: {
+                text: 'hello'
+            },
+            age: {
+                value: 15
+            },
+            isConfirm: {
+                value: true
+            },
+        },
     })
 })
 
