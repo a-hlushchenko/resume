@@ -4,20 +4,7 @@
         <div class="row">
 
 
-            <div class="col-12 me-5">
-
-                <ol class="breadcrumb mb-5">
-                    {{#each breadcrumb}}
-                    <li class="breadcrumb-item">
-                        {{#unless @last}}
-                        {{>link href=url text=name class='text-decoration-none'}}
-                        {{else}}
-                        <span>{{name}}</span>
-                        {{/unless}}
-                    </li>
-                    {{/each}}
-                </ol>
-            </div>
+            {{>breadcrumb}}
 
             {{#with productData}}
             <div class="col-6 me-5">

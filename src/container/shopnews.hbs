@@ -1,0 +1,48 @@
+<main>
+    <div class="row">
+
+        <section class='px-5'>
+
+            {{>breadcrumb}}
+
+            {{#with newsData}}
+
+            <img src="{{photo}}" alt="img" class="col-12 mb-5">
+
+            {{#with head}}
+            <div class="col-8 mb-5 ms-5">
+                <h1>{{heading}}</h1>
+                <p>{{description}}</p>
+            </div>
+            {{/with}}
+
+            {{#each body}}
+            <div class='col-8 mb-5 ms-5'>
+                <strong>{{title}}</strong>
+                <p>{{text}}</p>
+            </div>
+            {{/each}}
+
+            {{/with}}
+
+        </section>
+
+        <hr class="my-5">
+
+        {{#with newsOtherBlock}}
+        <section class='col-12'>
+            <div class="row">
+
+                <h2 class="text-center mb-5">{{title}}</h2>
+
+                {{>shoppost}}
+
+            </div>
+
+        </section>
+        {{/with}}
+
+        {{>shopaction}}
+
+    </div>
+</main>

@@ -7,27 +7,7 @@
 
                 <h2 class="text-center col-12 mb-4">{{title}}</h2>
 
-                {{#each cards}}
-                <div class="col-3">
-                    <div class="card text-bg-dark p-3 mb-4">
-
-                        <div class="card-header">
-                            <strong>{{title}}</strong>
-
-                            {{#if isTop}}
-                            <span class="badge rounded-pill text-bg-danger ms-1">Топ</span>
-                            {{/if}}
-
-                            {{#if isNew}}
-                            <span class="badge rounded-pill text-bg-success ms-1">Нова</span>
-                            {{/if}}
-                        </div>
-
-                        <p>{{description}}</p>
-
-                    </div>
-                </div>
-                {{/each}}
+                {{>shoppost}}
 
             </div>
         </section>
