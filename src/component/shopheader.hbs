@@ -1,0 +1,17 @@
+{{#with navigation}}
+<header class="col-12 card px-3 py-2 mb-5">
+    <div class="row">
+
+        <h1 class="col-7">shop</h1>
+
+        <nav class="nav col-4 pt-1">
+            {{#each links}}
+            {{>link href=href text=text blank=true noLine=true class='nav-item nav-link'}}
+            {{/each}}
+        </nav>
+
+        <div class='col-1 text-muted mt-3'>Logo</div>
+
+    </div>
+</header>
+{{/with}}
