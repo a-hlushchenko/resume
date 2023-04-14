@@ -1,0 +1,140 @@
+<main>
+
+    <section class='col-12'>
+        <div class="row">
+
+
+            <div class="col-12 me-5">
+
+                <ol class="breadcrumb mb-5">
+                    {{#each breadcrumb}}
+                    <li class="breadcrumb-item">
+                        {{#unless @last}}
+                        {{>link href=url text=name class='text-decoration-none'}}
+                        {{else}}
+                        <span>{{name}}</span>
+                        {{/unless}}
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+
+            {{#with productData}}
+            <div class="col-6 me-5">
+
+                <img src="{{img}}" alt="img" class="col-12 mb-5">
+
+                {{#with info}}
+
+                <div class="card card-body">
+
+                    <strong>{{title}}</strong>
+
+                    <p>{{about}}</p>
+
+                    <strong class="display-6 mb-3">{{price}}</strong>
+
+                    <div>
+                        {{#each category}}
+
+                        {{#if isHot}}<span class="badge rounded-pill text-bg-warning">{{name}}</span>{{/if}}
+
+                        {{#if isNew}}<span class="badge rounded-pill text-bg-primary">{{name}}</span>{{/if}}
+
+                        {{#if isBonus}}<span class="badge rounded-pill text-bg-info">{{name}}</span>{{/if}}
+
+                        {{/each}}
+                    </div>
+
+                </div>
+
+                {{/with}}
+            </div>
+
+            <div class="col-5">
+
+                {{#with item}}
+                <div>
+                    <table class="table table-bordered mb-5">
+                        <thead>
+                            <tr>
+                                {{#each head}}
+                                <th>{{this}}</th>
+                                {{/each}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                {{#each body.[0]}}
+                                <t{{#if @first}}h{{else}}d{{/if}}>{{this}}</t{{#if @first}}h{{else}}d{{/if}}>
+                                {{/each}}
+                            </tr>
+                            <tr>
+                                {{#each body.[1]}}
+                                <t{{#if @first}}h{{else}}d{{/if}}>{{this}}</t{{#if @first}}h{{else}}d{{/if}}>
+                                {{/each}}
+                            </tr>
+                            <tr>
+                                {{#each body.[2]}}
+                                <t{{#if @first}}h{{else}}d{{/if}}>{{this}}</t{{#if @first}}h{{else}}d{{/if}}>
+                                {{/each}}
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                {{/with}}
+
+                {{#with param}}
+                <div class="card mb-5">
+
+                    <div class="card-header">
+
+                        <h6>{{title}}</h6>
+
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+
+                        {{#each list}}
+                        <li class="list-group-item">
+                            {{this}}
+                        </li>
+                        {{/each}}
+                    </ul>
+
+                </div>
+                {{/with}}
+
+                {{#if alert.isError}}
+                <div class="alert alert-danger">{{alert.text}}</div>
+                {{/if}}
+
+            </div>
+
+            <div class="card card-body flex-row mt-5">
+                {{#each actionList}}
+                {{#if isWarning}}<button class="btn btn-warning col-2">{{name}}</button>{{/if}}
+                {{#if isError}}<button class="btn btn-outline-danger col-2 mx-4">{{name}}</button>{{/if}}
+                {{#if isSuccess}}<button class="btn btn-success col-2 me-4">{{name}}</button>{{/if}}
+                {{#if isGood}}<button class="btn btn-outline-success col-2">{{name}}</button>{{/if}}
+                {{/each}}
+            </div>
+
+            {{/with}}
+
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    {{#with goodsOtherBlock}}
+    <section class="col-12">
+        <h2 class="text-center my-5">{{title}}</h2>
+        {{>shopcard}}
+    </section>
+    {{/with}}
+
+    {{>shopaction}}
+
+</main>

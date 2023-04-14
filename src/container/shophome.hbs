@@ -1,23 +1,5 @@
-<main class="px-5 py-2">
+<main>
     <div class="row">
-
-        {{#with navigation}}
-        <header class="col-12 card p-2 mb-5">
-            <div class="row">
-
-                <h1 class="col-7">shop</h1>
-
-                <nav class="nav col-4 pt-1">
-                    {{#each links}}
-                    {{>link href=href text=text blank=true noLine=true class='nav-item nav-link'}}
-                    {{/each}}
-                </nav>
-
-                <div class='col-1 text-muted mt-3'>{{Logo}}</div>
-
-            </div>
-        </header>
-        {{/with}}
 
         {{#with newsBlock}}
         <section class="col-12">
@@ -68,32 +50,7 @@
                 {{/each}}
             </nav>
 
-            <div class="row">
-                {{#each cards}}
-                <div class="col-4">
-                    <div class="card mb-4">
-
-                        <img src="{{image}}" alt="{{title}}">
-
-
-                        <div class="card-body">
-                            <strong>{{title}}
-
-                                {{#if isHot}}
-                                <span class="badge rounded-pill text-bg-warning text-light text-uppercase">Hot!</span>
-                                {{/if}}
-
-                                {{#if isNew}}
-                                <span class="badge rounded-pill text-bg-primary text-light text-uppercase">Нове</span>
-                                {{/if}}
-                            </strong>
-                            <p>{{description}}</p>
-                        </div>
-
-                    </div>
-                </div>
-                {{/each}}
-            </div>
+            {{>shopcard}}
 
         </section>
         {{/with}}
@@ -111,50 +68,7 @@
         </section>
         {{/with}}
 
-        <hr class="my-5">
-
-        {{#with service}}
-        <section class="col-12 card text-center p-3 text-bg-success">
-            <h2>{{title}}</h2>
-            <p>{{description}}</p>
-            {{#each buttons}}
-            <div>
-                {{>link href=link text=text blank=true noLine=true class='btn btn-primary'}}
-            </div>
-            {{/each}}
-        </section>
-        {{/with}}
-
-        <hr class="my-5">
-
-        {{!-- <section class="col-10">
-            <div class="row">
-                {{#each footer}}
-                {{#each this}}
-                <div class="col-2 mx-3">
-                    {{>link href=link text=text blank=true noLine=true class='btn btn-link'}}
-                </div>
-                {{/each}}
-                {{/each}}
-            </div>
-        </section> --}}
-
-
-        <footer class='col-10'>
-            <nav class="row nav">
-
-                {{#each footer}}
-
-                {{#each this}}
-                <div class="col-2 mx-3">
-                    {{>link href=link text=text blank=true noLine=true class='btn btn-link nav-item nav-link
-                    text-start'}}
-                </div>
-                {{/each}}
-                {{/each}}
-            </nav>
-
-        </footer>
+        {{>shopaction}}
 
     </div>
 </main>
