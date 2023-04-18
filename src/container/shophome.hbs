@@ -35,18 +35,7 @@
         </section>
         {{/with}}
 
-        <hr class="my-5">
-
-        {{#with subscribe}}
-        <section class="col-12">
-            <div class="row card text-bg-dark p-3 flex-row">
-                <h2 class="col-12">{{header}}</h2>
-                <p class="col-9">{{description}}</p>
-                <a class="btn btn-primary col-3" href="{{buttons.[1].link}}">{{buttons.[1].text}}</a>
-                <a class="btn btn-primary col-3" href="{{buttons.[0].link}}">{{buttons.[0].text}}</a>
-            </div>
-        </section>
-        {{/with}}
+        {{>subscribeshop}}
 
         {{>shopaction}}
 
