@@ -1,9 +1,7 @@
-<hr class="my-5">
-
 {{#with service}}
-<section class="col-12 card text-center p-3 text-bg-success">
-    <h2>{{title}}</h2>
-    <p>{{description}}</p>
+<section class="col-12 card text-center p-4 text-bg-success">
+    <h2 class="mb-3">{{title}}</h2>
+    <p class="mb-3">{{description}}</p>
     {{#each buttons}}
     <div>
         {{>link href=link text=text blank=true noLine=true class='btn btn-primary'}}
