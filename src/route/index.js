@@ -2150,9 +2150,9 @@ router.get('/shopnews', function (req, res) {
     })
 })
 
-router.get('/bsn', function (req, res) {
-    res.render('bootstrapnew', {
-        layout: 'basic'
+router.get('/csss', function (req, res) {
+    res.render('css', {
+        layout: 'css'
     })
 })
 
