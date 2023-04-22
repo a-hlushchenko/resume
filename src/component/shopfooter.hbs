@@ -1,38 +1,15 @@
-<hr class="my-5">
+<hr class='my-5' />
 
-<footer class='col-12'>
-    <nav class="row nav">
-
-        <div class="col-2 mx-3">
-            {{#each footer.[0]}}
-            <a href="{{link}}" class='nav-item nav-link{{#if @last}} disabled{{/if}}'>{{text}}</a>
-            {{/each}}
+<footer class='row m-3'>
+  <nav class='nav'>
+    {{#each footer}}
+      <div class='col-2'>
+        {{#each this}}
+        <div class="nav-iem">
+            <a class="nav-link {{#if @last}}disabled{{/if}}" {{#if @last}}{{else}} href={{link}}{{/if}}>{{text}}</a>
         </div>
-
-        <div class="col-2 mx-3">
-            {{#each footer.[1]}}
-            <a href="{{link}}" class='nav-item nav-link{{#if @last}} disabled{{/if}}'>{{text}}</a>
-            {{/each}}
-        </div>
-
-        <div class="col-2 mx-3">
-            {{#each footer.[2]}}
-            <a href="{{link}}" class='nav-item nav-link{{#if @last}} disabled{{/if}}'>{{text}}</a>
-            {{/each}}
-        </div>
-
-        <div class="col-2 mx-3">
-            {{#each footer.[3]}}
-            <a href="{{link}}" class='nav-item nav-link{{#if @last}} disabled{{/if}}'>{{text}}</a>
-            {{/each}}
-        </div>
-
-        <div class="col-2 mx-3">
-            {{#each footer.[4]}}
-            <a href="{{link}}" class='nav-item nav-link{{#if @last}} disabled{{/if}}'>{{text}}</a>
-            {{/each}}
-        </div>
-
-    </nav>
-
+        {{/each}}
+      </div>
+    {{/each}}
+  </nav>
 </footer>
