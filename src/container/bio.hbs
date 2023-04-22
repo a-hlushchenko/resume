@@ -4,31 +4,31 @@
 
       {{> title big=true data=name}}
 
-      <div>
+      <div class="mb-2">
         <time>birthdate - {{birthdate}}</time>
       </div>
 
-      <div>
-        <address>birthplace - {{birthplace}}</address>
+      <div class="mb-2">
+        <address class="mb-0">birthplace - {{birthplace}}</address>
       </div>
 
-      <div>
+      <div class="mb-2">
         <time>deathdate - {{deathdate}}</time>
       </div>
 
-      <div>
-        <address>deathplace - {{deathplace}}</address>
+      <div class="mb-2">
+        <address class="mb-0">deathplace - {{deathplace}}</address>
       </div>
 
-      <div>nationality - {{nationality}}</div>
+      <div class="mb-2">nationality - {{nationality}}</div>
 
       <div>occupation - {{occupation}}</div>
 
       <hr>
 
       <div>
-        known_for
-        <ul>
+        <b>known_for</b>
+        <ul class="mt-3">
           {{#each known_for}}
           <li>
             <div>
@@ -42,8 +42,8 @@
       <hr>
 
       <div>
-        education
-        <ul>
+        <b>education</b>
+        <ul class="mt-3">
           {{#each education}}
           <li>
             <div>{{degree}}</div>
@@ -56,107 +56,107 @@
       </div>
       <hr>
       <div>
-        notable publications
-        <ul>
+        <b>notable publications</b>
+        <ul class="mt-3">
           {{#each notable_publications}}
           <li>
             <div>title - {{title}}</div>
             <div><time>year - {{year}}</time></div>
             <div>publisher - {{publisher}}</div>
           </li>
-          
+
           {{/each}}
         </ul>
       </div>
       <hr>
       <div>
-        partners
-        <ul>
+        <b>partners</b>
+        <ul class="mt-3">
           {{#each partners}}
           <li>
             <div>name - {{name}}</div>
             <div>relationship - {{relationship}}</div>
             <div><time>years - {{years}}</time></div>
           </li>
-          
+
           {{/each}}
         </ul>
       </div>
       <hr>
       <div>
-        awards
-        <ul>
+        <b>awards</b>
+        <ul class="mt-3">
           {{#each awards}}
           <li>
             <div>title - {{title}}</div>
             <div><time>year - {{year}}</time></div>
             <div>description - {{description}}</div>
           </li>
-        
+
           {{/each}}
         </ul>
       </div>
       <hr>
       <div>
-        influences
-        <ul>
+        <b>influences</b>
+        <ul class="mt-3">
           {{#each influences}}
           <li>
             {{this}}
           </li>
-        
+
           {{/each}}
         </ul>
       </div>
       <hr>
       <div>
-        influenced
-        <ul>
+        <b>influenced</b>
+        <ul class="mt-3">
           {{#each influenced}}
           <li>
             {{this}}
           </li>
-         
+
           {{/each}}
         </ul>
       </div>
       <hr>
       <div>
-        quotes
-        <ul>
+        <b>quotes</b>
+        <ul class="mt-3">
           {{#each quotes}}
           <li>
             <q>
               {{this}}
             </q>
           </li>
-        
+
           {{/each}}
         </ul>
       </div>
       <hr>
       <div>
-        major discoveries
-        <ul>
+        <b>major discoveries</b>
+        <ul class="mt-3">
           {{#each major_discoveries}}
           <li>
             <div>title - {{title}}</div>
             <div>year - <time>{{year}}</time></div>
             <div>description - {{description}}</div>
           </li>
-      
+
           {{/each}}
         </ul>
       </div>
       <hr>
       <div>
-        contributions
+        <b>contributions</b>
         {{#with contributions}}
-        <div>title - {{title}}</div>
-        <div>
-          <p>description - {{description}}</p>
+        <div class="mt-3 mb-2">title - {{title}}</div>
+        <div class="mb-2">
+          <p class="mb-0">description - {{description}}</p>
         </div>
-        <div>year - {{year}}</div>
+        <div class="mb-2">year - {{year}}</div>
         <div>field - {{field}}</div>
         {{/with}}
       </div>

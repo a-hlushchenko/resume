@@ -8,13 +8,13 @@
 
             <div>
                 {{#with features}}
-                <div>
+                <div class="mb-5">
 
                     {{#with interior}}
 
                     {{>text color='light' name='interior' noLine=true sq=true}}
 
-                    <div>
+                    <div class="mt-4">
 
                         {{>text color='warning' name='seats' noLine=true sq=true}}
 
@@ -29,7 +29,7 @@
 
                     </div>
 
-                    <div>
+                    <div class="mt-4">
 
                         {{>text color='warning' name='dashboard' noLine=true sq=true}}
 
@@ -41,7 +41,8 @@
                         <div>
                             <details>
 
-                                <summary>{{>text color='info' name='display' noLine=true sq=true noDiv=true}}</summary>
+                                <summary>{{>text color='info' name='display' noLine=true sq=true
+                                    noDiv=true}}</summary>
 
                                 {{#with display}}
 
@@ -59,7 +60,7 @@
 
                     </div>
 
-                    <div>
+                    <div class="mt-4">
 
                         {{>text color='warning' name='dashboard' noLine=true sq=true}}
 
@@ -77,14 +78,14 @@
 
                 </div>
 
-                <div>
+                <div class="mb-5">
 
                     {{#with exterior}}
-                    <div>
+                    <div class="mt-4">
 
                         {{>text color='light' name='exterior' noLine=true sq=true}}
 
-                        <div>
+                        <div class="mt-4">
 
                             {{>text color='warning' name='wheels' noLine=true sq=true}}
 
@@ -95,7 +96,7 @@
                             {{/with}}
                         </div>
 
-                        <div>
+                        <div class="mt-4">
 
                             {{>text color='warning' name='headlights' noLine=true sq=true}}
 
@@ -106,7 +107,7 @@
                             {{/with}}
                         </div>
 
-                        <div>
+                        <div class="mt-4">
 
                             {{>text color='warning' name='sunroof' noLine=true sq=true}}
 
@@ -122,23 +123,24 @@
                     </div>
                     {{/with}}
 
-                    <div>
+                    <div class="mb-5">
                         {{#with safety}}
 
-                        {{>text color='light' name='safety' noLine=true sq=true}}
+                        <div class="mt-4">
+                            {{>text color='light' name='safety' noLine=true sq=true}}
 
-                        <div>
 
-                            {{>text color='warning' name='airbags' noLine=true sq=true}}
-
-                            {{#with assistance}}
-                            {{>text color='success' name='blind spot monitoring' data=blind_spot_monitoring}}
-                            {{>text color='success' name='rear cross traffic alert' data=rear_cross_traffic_alert}}
-                            {{>text color='success' name='lane departure warning' data=lane_departure_warning}}
-                            {{>text color='success' name='adaptive cruise control' data=adaptive_cruise_control}}
-                            {{>text color='success' name='collision warning' data=collision_warning}}
-                            {{/with}}
-                        </div> 
+                            <div class="mt-4">
+                                {{>text color='warning' name='airbags' noLine=true sq=true}}
+                                {{#with assistance}}
+                                {{>text color='success' name='blind spot monitoring' data=blind_spot_monitoring}}
+                                {{>text color='success' name='rear cross traffic alert' data=rear_cross_traffic_alert}}
+                                {{>text color='success' name='lane departure warning' data=lane_departure_warning}}
+                                {{>text color='success' name='adaptive cruise control' data=adaptive_cruise_control}}
+                                {{>text color='success' name='collision warning' data=collision_warning}}
+                                {{/with}}
+                            </div>
+                        </div>
 
                         {{/with}}
                     </div>
@@ -148,18 +150,19 @@
                 {{/with}}
             </div>
 
-            <div>
+            <div class="mb-5">
 
                 {{>text color='light' name='engine' noLine=true sq=true}}
 
                 {{#with engine}}
+                <div class="mt-4">
+                    {{>text color='secondary' name='type' data=type}}
+                    {{>text color='danger' name='displacement' data=displacement}}
+                    {{>text color='danger' name='horsepower' data=horsepower}}
+                    {{>text color='danger' name='torque' data=torque}}
+                </div>
 
-                {{>text color='secondary' name='type' data=type}}
-                {{>text color='danger' name='displacement' data=displacement}}
-                {{>text color='danger' name='horsepower' data=horsepower}}
-                {{>text color='danger' name='torque' data=torque}}
-
-                <div>
+                <div class="mt-4">
 
                     {{>text color='warning' name='transmission' noLine=true sq=true}}
 
@@ -172,7 +175,7 @@
                 {{/with}}
             </div>
 
-            <div>
+            <div class="mt-4">
 
                 {{>text color='light' name='fuel economy' noLine=true sq=true}}
 
@@ -185,28 +188,29 @@
             </div>
 
             <div>
+                <div class="mt-4">
+                    {{>text color='light' name='price' noLine=true sq=true}}
 
-                {{>text color='light' name='price' noLine=true sq=true}}
+                    {{#with price}}
 
-                {{#with price}}
+                    {{>text color='secondary' name='base' data=base}}
+                    {{>text color='danger' name='destination' data=destination}}
 
-                {{>text color='secindary' name='base' data=base}}
-                {{>text color='danger' name='destination' data=destination}}
+                    <div class="mt-4">
 
-                <div>
+                        {{>text color='warning' name='options' noLine=true sq=true}}
 
-                    {{>text color='warning' name='options' noLine=true sq=true}}
+                        {{#with options}}
+                        {{>text color='danger' name='navigation' data=navigation}}
+                        {{>text color='danger' name='moonroof' data=moonroof}}
+                        {{>text color='danger' name='premium paint' data=premium_paint}}
+                        {{/with}}
+                    </div>
 
-                    {{#with options}}
-                    {{>text color='danger' name='navigation' data=navigation}}
-                    {{>text color='danger' name='moonroof' data=moonroof}}
-                    {{>text color='danger' name='premium paint' data=premium_paint}}
+                    {{>text color='danger' name='total' data=total}}
+
                     {{/with}}
                 </div>
-
-                {{>text color='danger' name='total' data=total}}
-
-                {{/with}}
             </div>
 
         </div>

@@ -2,11 +2,11 @@
     <main>
         <section>
 
-            <h2>{{> text color='warning' name=name noLine=true}}</h2>
+            <h2 class="mb-3">{{> text color='warning' name=name noLine=true}}</h2>
 
             {{>text color='info' name='description' data=description}}
 
-            <div>
+            <div class="mb-3">
                 {{#with history}}
 
                 {{>text color='secondary' name='year' data=year}}
@@ -16,7 +16,7 @@
                 {{/with}}
             </div>
 
-            <div>
+            <div class="mb-3">
                 <details>
                     <summary>{{>text color='dark' name='types' noLine=true noDiv=true}}</summary>
                     <ul>
@@ -34,31 +34,31 @@
             <div>
                 {{#with syntax}}
 
-                <div>{{>text color='danger' name='syntax' noDiv=true}}
+                <div class="mb-2">{{>text color='danger' name='syntax' noDiv=true}}
                     {{#each variables}}
                     {{this}},
                     {{/each}}
                 </div>
 
-                <div>{{>text color='danger' name='functions' noDiv=true}}
+                <div class="mb-2">{{>text color='danger' name='functions' noDiv=true}}
                     {{#each functions}}
                     {{this}},
                     {{/each}}
                 </div>
 
-                <div>{{>text color='danger' name='conditionals' noDiv=true}}
+                <div class="mb-2">{{>text color='danger' name='conditionals' noDiv=true}}
                     {{#each conditionals}}
                     {{this}},
                     {{/each}}
                 </div>
 
-                <div>{{>text color='danger' name='loops' noDiv=true}}
+                <div class="mb-2">{{>text color='danger' name='loops' noDiv=true}}
                     {{#each loops}}
                     {{this}},
                     {{/each}}
                 </div>
 
-                <div>{{>text color='danger' name='classes' noDiv=true}}
+                <div class="mb-3">{{>text color='danger' name='classes' noDiv=true}}
                     {{#each classes}}
                     {{this}},
                     {{/each}}
@@ -67,64 +67,64 @@
                 {{/with}}
             </div>
 
-            <div>
+            <div class="mb-2">
                 <details>
                     <summary>{{>text color='dark' name='features' noLine=true noDiv=true}}</summary>
-                    
+
                     <ul>
                         {{#each features}}
-                        <li>
+                        <li{{#if @first}} class='mt-2' {{/if}}>
                             <div>
                                 {{this}}
                             </div>
-                        </li>
-                        {{/each}}
+                            </li>
+                            {{/each}}
                     </ul>
                 </details>
             </div>
 
-            <div>
+            <div class="mb-2">
                 <details>
                     <summary>{{>text color='dark' name='libraries' noLine=true noDiv=true}}</summary>
-                    
+
                     <ul>
                         {{#each libraries}}
-                        <li>
+                        <li{{#if @first}} class='mt-2' {{/if}}>
                             <div>
                                 {{this}}
                             </div>
-                        </li>
-                        {{/each}}
+                            </li>
+                            {{/each}}
                     </ul>
                 </details>
             </div>
 
-            <div>
+            <div class="mb-3">
                 <details>
                     <summary>{{>text color='dark' name='tools' noLine=true noDiv=true}}</summary>
-                    
+
                     <ul>
                         {{#each tools}}
-                        <li>
+                        <li{{#if @first}} class='mt-2' {{/if}}>
                             <div>
                                 {{this}}
                             </div>
-                        </li>
-                        {{/each}}
+                            </li>
+                            {{/each}}
                     </ul>
                 </details>
             </div>
 
-            
+
             <div>
                 {{>text color='info' noLine=true name='community'}}
                 <ul>
                     {{#each community}}
-                    <li>
+                    <li class="mb-3{{#if @first}} mt-3{{/if}}">
                         {{>text color='primary' name='name' data=name}}
                         {{>text color='primary' name='type' data=type}}
                     </li>
-                    
+
                     {{/each}}
                 </ul>
             </div>

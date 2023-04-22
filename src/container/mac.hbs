@@ -13,7 +13,7 @@
         <div>
 
             {{#with processor}}
-            <div>
+            <div class="mt-5">
 
                 {{>text color='warning' name='processor' noLine=true sq=true}}
 
@@ -31,7 +31,7 @@
             {{/with}}
 
             {{#with memory}}
-            <div>
+            <div class="mt-5">
 
                 {{>text color='warning' name='memory' noLine=true sq=true}}
 
@@ -45,7 +45,7 @@
             {{/with}}
 
             {{#with storage}}
-            <div>
+            <div class="mt-5">
 
                 {{>text color='warning' name='storage' noLine=true sq=true}}
 
@@ -57,7 +57,7 @@
             {{/with}}
 
             {{#with display}}
-            <div>
+            <div class="mt-5">
 
                 {{>text color='warning' name='display' noLine=true sq=true}}
 
@@ -77,7 +77,7 @@
             {{/with}}
 
             {{#with graphics}}
-            <div>
+            <div class="mt-5">
 
                 {{>text color='warning' name='graphics' noLine=true sq=true}}
 
@@ -90,18 +90,18 @@
             </div>
             {{/with}}
 
-            <div>
+            <div class="mt-5">
                 {{>text color='warning' name='ports' noLine=true sq=true}}
                 <ul>
                     {{#each ports}}
-                    <li>
+                    <li class="mt-4">
 
                         {{>text color='secondary' name='type' data=type}}
 
-                        {{>text color='danger' name='count' data=count}} 
+                        {{>text color='danger' name='count' data=count}}
 
                         {{#if features}}
-                        <div>
+                        <div class="mt-3">
                             {{>text color='warning' name='features' noLine=true sq=true}}
 
 
@@ -122,7 +122,7 @@
             </div>
 
             {{#with battery}}
-            <div>
+            <div class="mt-5">
 
                 {{>text color='warning' name='battery' noLine=true sq=true}}
 
@@ -132,12 +132,12 @@
 
                 {{>text color='secondary' name='life' data=life}}
             </div>
-            {{/with}} 
+            {{/with}}
 
-            {{>text color='danger' name='weight' data=weight}} 
+            {{>text color='danger' name='weight' data=weight}}
 
             {{#with dimensions}}
-            <div>
+            <div class="mt-5">
 
                 {{>text color='warning' name='dimensions' noLine=true sq=true}}
 
@@ -147,14 +147,14 @@
 
                 {{>text color='secondary' name='depth' data=depth}}
             </div>
-            {{/with}} 
+            {{/with}}
 
-            {{>text color='danger' name='operating system' data=operating_system}} 
+            {{>text color='danger' name='operating system' data=operating_system}}
 
-            <div>
+            <div class="mt-5">
                 <ul>
                     {{#each accessories}}
-                    <li>
+                    <li class="mb-4">
 
                         {{>text color='warning' name='accessories' noLine=true sq=true}}
 
@@ -162,7 +162,7 @@
 
                         {{>text color='danger' name='price' data=price}}
 
-                    </li> 
+                    </li>
                     {{/each}}
                 </ul>
             </div>

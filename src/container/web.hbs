@@ -17,10 +17,10 @@
             <hr>
             <div>
               elemenets
-              {{#each elements}}
               <ul>
-                <li>
-                  <div>name - {{name}}</div>
+                {{#each elements}}
+                <li class='mt-3'>
+                  <div class="mb-2">name - {{name}}</div>
 
                   <div>
                     <p>description - {{description}}</p>
@@ -29,20 +29,20 @@
                   <div>
                     {{#each attributes}}
                     <ul>
-                      <li>
+                      <li class="mb-2">
 
                         <div>name - {{name}}</div>
 
                         <div>description - {{description}}</div>
 
                       </li>
-                      
+
                     </ul>
                     {{/each}}
                   </div>
                 </li>
+                {{/each}}
               </ul>
-              {{/each}}
             </div>
             {{/if}}
 
@@ -52,24 +52,26 @@
               properties
               {{#each properties}}
               <ul>
-                <li>
+                <li class="mt-3">
 
-                  <div>name - {{name}}</div>
-
-                  <div>description - {{description}}</div>
+                  <div class="mb-2">name - {{name}}</div>
 
                   <div>
-                    {{#each values}}
+                    <p>description - {{description}}</p>
+                  </div>
+
+                  <div>
                     <ul>
-                      <li>
+                      {{#each values}}
+                      <li class="mb-2">
 
                         <div>color - {{value}}</div>
 
                         <div>description - {{description}}</div>
 
                       </li>
+                      {{/each}}
                     </ul>
-                    {{/each}}
                   </div>
 
                 </li>
@@ -81,20 +83,20 @@
             {{#if functions}}
             <hr>
             <div>
-              {{#each functions}}
               <ul>
-                <li>
+                {{#each functions}}
+                <li class="mb-3">
 
                   <div><code>name - {{name}}</code></div>
 
-                  <div>
+                  <div class="mt-2">
                     <p>description - {{description}}</p>
                   </div>
 
                   <div>
                     {{#each parameters}}
                     <ul>
-                      <li>
+                      <li class="mb-2">
 
                         <div>name - {{name}}</div>
 
@@ -107,14 +109,13 @@
                   </div>
 
                 </li>
+                {{/each}}
               </ul>
-              {{/each}}
             </div>
             {{/if}}
 
           </li>
-          <hr>
-          <hr>
+          <hr class="my-5">
         </ul>
         {{/each}}
       </div>

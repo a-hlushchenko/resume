@@ -19,9 +19,9 @@
                 <hr>
 
                 <div>
-                    program
-                    {{#each program}}
-                    <ul>
+                    <b>program</b>
+                    <ul class="mt-2">
+                        {{#each program}}
                         <li>
 
                             <div>name - {{name}}</div>
@@ -46,7 +46,7 @@
                                     <div>
                                         {{#each exhibits}}
                                         <ul>
-                                            <li>
+                                            <li class="mb-2">
 
                                                 <div>name - {{name}}</div>
 
@@ -68,7 +68,7 @@
                                                 </div>
 
                                             </li>
-                                            
+
                                         </ul>
                                         {{/each}}
                                     </div>
@@ -119,11 +119,10 @@
                             {{/with}}
 
                         </li>
-                        
-                        <hr>
-                        <hr>
+
+                        <hr class="my-5">
+                        {{/each}}
                     </ul>
-                    {{/each}}
                 </div>
 
             </div>

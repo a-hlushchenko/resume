@@ -5,13 +5,13 @@
 
         <div>
             {{>text color='warning' name='users' noLine=true sq=true}}
-            {{#each users}}
-            <ul>
+            <ul class="mt-4">
+                {{#each users}}
                 <li>
                     {{>text color='warning' name='user' noLine=true sq=true}}
                     {{>user}}
 
-                    <div>
+                    <div class="mt-4">
                         {{#each friends}}
 
                         {{>text color='warning' name='friends' noLine=true sq=true}}
@@ -19,19 +19,12 @@
 
                         {{#if mutual_friends}}
                         <div>
-                            <ul>
+                            <ul class="mt-4 mb-4">
                                 {{#each mutual_friends}}
                                 <li>
 
                                     {{>text color='warning' name='mutual friend' noLine=true sq=true}}
                                     {{>user}}
-
-                                    <div>
-                                        {{>text color='warning' name='mutual friend' noLine=true sq=true}}
-                                        {{#each mutual_friends}}
-                                        {{>user}}
-                                        {{/each}}
-                                    </div>
 
                                 </li>
                                 {{/each}}
@@ -45,8 +38,8 @@
                     {{>groups}}
 
                 </li>
+                {{/each}}
             </ul>
-            {{/each}}
         </div>
 
     </section>

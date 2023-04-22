@@ -20,8 +20,8 @@
       </div>
       <hr>
       <div>
-        освіта
-        <ul>
+        <b>освіта</b>
+        <ul class="mt-2">
           {{#each education}}
           <li>
             <div>{{degree}}</div>
@@ -34,13 +34,13 @@
       </div>
       <hr>
       <div>
-        компанія
-        <ul>
+        <b>компанія</b>
+        <ul class="mt-2">
           {{#each workExperience}}
           <li>
-            <div>{{company}}</div>
+            <div class="mb-3">{{company}}</div>
             {{> title data=title}}
-            <div>
+            <div class="mb-2">
               <time>час роботи -
                 {{startDate}} -
                 {{#if endDate}}
@@ -51,11 +51,11 @@
               </time>
             </div>
             <div>
-              опис
-              <ul>
+              <b>опис</b>
+              <ul class="mt-2 mb-2">
                 {{#each responsibilities}}
                 <li>
-                  {{this}} 
+                  {{this}}
                 </li>
                 {{/each}}
               </ul>
@@ -70,8 +70,8 @@
             </div>
             <hr>
             <div>
-              працівники -
-              <ul>
+              <b>працівники</b>
+              <ul class="mt-2">
                 {{#each employees}}
                 <li>
                   <div>name - {{name}}</div>
@@ -79,8 +79,8 @@
                   <div>departament - {{department}}</div>
                   <hr>
                   <div>
-                    projects
-                    <ul>
+                    <b>projects</b>
+                    <ul class="mt-2">
                       {{#each projects}}
                       <li>
                         <div>name - {{name}}</div>
@@ -88,8 +88,8 @@
                         <div>status - {{status}}</div>
                         <hr>
                         <div>
-                          teams
-                          <ul>
+                          <b>teams</b>
+                          <ul class="mt-2">
                             {{#each teams}}
                             <li>
                               <div>{{team_name}}</div>
@@ -102,8 +102,8 @@
                               {{/with}}
                               <hr>
                               <div>
-                                team members
-                                <ul>
+                                <b>team members</b>
+                                <ul class="mt-2">
                                   {{#each team_members}}
                                   <li>
                                     <div>{{name}}</div>
@@ -112,8 +112,8 @@
                                     noLine=true}}
                                     <hr>
                                     <div>
-                                      skills
-                                      <ul>
+                                      <b>skills</b>
+                                      <ul class="mt-2">
                                         {{#each skills}}
                                         <li>
                                           {{this}}
@@ -123,8 +123,8 @@
                                     </div>
                                     <hr>
                                     <div>
-                                      projects
-                                      <ul>
+                                      <b>projects</b>
+                                      <ul class="mt-2">
                                         {{#each projects}}
                                         <li>
                                           <div>{{name}}</div>
@@ -140,8 +140,8 @@
                                           </div>
                                           <hr>
                                           <div>
-                                            team members
-                                            <ul>
+                                            <b>team members</b>
+                                            <ul class="mt-2">
                                               {{#each team_members}}
                                               <li>
                                                 <div>{{name}}</div>

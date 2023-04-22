@@ -31,12 +31,14 @@ var footer = {
 
 router.get('/', function (req, res) {
   res.render('index', {
+    title: 'Головна',
     layout: 'index',
   })
 })
 
 router.get('/summary', function (req, res) {
   res.render('summary', {
+    title: 'summary',
     page: {
       title: 'Resume | Summary',
     },
@@ -64,6 +66,7 @@ router.get('/summary', function (req, res) {
 
 router.get('/skills', function (req, res) {
   res.render('skills', {
+    title: 'skills',
     page: {
       title: 'Resume | Skills',
     },
@@ -130,6 +133,7 @@ router.get('/skills', function (req, res) {
 
 router.get('/education', function (req, res) {
   res.render('education', {
+    title: 'education',
     page: {
       title: 'Resume | Education',
     },
@@ -173,6 +177,7 @@ router.get('/education', function (req, res) {
 
 router.get('/work', function (req, res) {
   res.render('work', {
+    title: 'work',
     page: {
       title: 'Resume | Work',
     },
@@ -229,8 +234,8 @@ router.get('/work', function (req, res) {
 })
 
 router.get('/person', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
+    title: 'person',
     layout: 'basic',
     person: {
       name: 'Emma Johnson',
@@ -328,6 +333,7 @@ router.get('/person', function (req, res) {
 
 router.get('/bio', function (req, res) {
   res.render('bio', {
+    title: 'bio',
     layout: 'basic',
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
@@ -422,6 +428,7 @@ router.get('/bio', function (req, res) {
 
 router.get('/program', function (req, res) {
   res.render('program', {
+    title: 'program',
     layout: 'basic',
     program: {
       excursion: {
@@ -505,6 +512,7 @@ router.get('/program', function (req, res) {
 
 router.get('/web', function (req, res) {
   res.render('web', {
+    title: 'web',
     layout: 'basic',
     web: {
       languages: [
@@ -632,6 +640,7 @@ router.get('/web', function (req, res) {
 
 router.get('/js', function (req, res) {
   res.render('js', {
+    title: 'js',
     layout: 'basic',
     name: 'JavaScript',
     description:
@@ -707,6 +716,7 @@ router.get('/js', function (req, res) {
 
 router.get('/car', function (req, res) {
   res.render('car', {
+    title: 'car',
     layout: 'basic',
     make: 'Toyota',
     model: 'Camry',
@@ -801,6 +811,7 @@ router.get('/car', function (req, res) {
 
 router.get('/mac', function (req, res) {
   res.render('mac', {
+    title: 'mac',
     layout: 'basic',
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
@@ -884,6 +895,7 @@ router.get('/mac', function (req, res) {
 
 router.get('/facebook', function (req, res) {
   res.render('facebook', {
+    title: 'facebook',
     layout: 'basic',
     name: 'Facebook',
     users: [
@@ -1037,24 +1049,21 @@ router.get('/facebook', function (req, res) {
 
 router.get('/bootstrap', function (req, res) {
   res.render('bootstrap', {
+    title: 'bootstrap',
     layout: 'basic',
   })
 })
 
 router.get('/bootstrap2', function (req, res) {
   res.render('bootstrap2', {
-    layout: 'basic',
-  })
-})
-
-router.get('/bootstrap3', function (req, res) {
-  res.render('bootstrap3', {
+    title: 'bootstrap2',
     layout: 'basic',
   })
 })
 
 router.get('/task21', function (req, res) {
   res.render('task21', {
+    title: 'task21',
     layout: 'basic',
     heading: {
       main: {
@@ -1120,6 +1129,7 @@ router.get('/task21', function (req, res) {
 
 router.get('/task22', function (req, res) {
   res.render('task22', {
+    title: 'task22',
     layout: 'basic',
     page_header: {
       title: 'InnovaMind',
@@ -1174,6 +1184,7 @@ router.get('/task22', function (req, res) {
 
 router.get('/task31', function (req, res) {
   res.render('task31', {
+    title: 'task31',
     layout: 'basic',
     navigation: {
       links: [
@@ -1424,6 +1435,7 @@ router.get('/task31', function (req, res) {
 
 router.get('/shophome', function (req, res) {
   res.render('shophome', {
+    title: 'shop home',
     layout: 'shop',
     navigation: {
       links: [
@@ -1707,6 +1719,7 @@ router.get('/shophome', function (req, res) {
 
 router.get('/list', function (req, res) {
   res.render('list', {
+    title: 'list',
     layout: 'basic',
     list: [
       { name: 'Anton' },
@@ -1735,6 +1748,7 @@ router.get('/list', function (req, res) {
 
 router.get('/shopproduct', function (req, res) {
   res.render('shopproduct', {
+    title: 'shop product',
     layout: 'shop',
     navigation: {
       links: [
@@ -1944,6 +1958,7 @@ router.get('/shopproduct', function (req, res) {
 
 router.get('/shopnews', function (req, res) {
   res.render('shopnews', {
+    title: 'shop news',
     layout: 'shop',
     navigation: {
       links: [
@@ -2147,12 +2162,14 @@ router.get('/shopnews', function (req, res) {
 
 router.get('/csss', function (req, res) {
   res.render('css', {
+    title: 'css',
     layout: 'css',
   })
 })
 
 router.get('/shoporder', function (req, res) {
   res.render('shoporder', {
+    title: 'shop order',
     layout: 'shop',
     navigation: {
       links: [
@@ -2513,6 +2530,7 @@ router.get('/shoporder', function (req, res) {
 
 router.get('/shopcart', function (req, res) {
   res.render('shopcart', {
+    title: 'shop cart',
     layout: 'shop',
     navigation: {
       links: [
@@ -2754,6 +2772,7 @@ router.get('/shopcart', function (req, res) {
 
 router.get('/shopprofile', function (req, res) {
   res.render('shopprofile', {
+    title: 'shop profile',
     layout: 'shop',
     navigation: {
       links: [
@@ -3043,6 +3062,7 @@ router.get('/shopprofile', function (req, res) {
 
 router.get('/shopreview', function (req, res) {
   res.render('shopreview', {
+    title: 'shop review',
     layout: 'shop',
     navigation: {
       links: [
@@ -3324,6 +3344,7 @@ router.get('/shopreview', function (req, res) {
 
 router.get('/shopcatalog', function (req, res) {
   res.render('shopcatalog', {
+    title: 'shop catalog',
     layout: 'shop',
     navigation: {
       links: [
