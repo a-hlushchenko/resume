@@ -2,7 +2,7 @@
     <section>
         <h2>{{make}} {{model}} {{year}}
             {{>text color='secondary' noLine=true name=color noDiv=true}}
-        </h2><br>
+        </h2>
 
         <div>
 
@@ -12,7 +12,7 @@
 
                     {{#with interior}}
 
-                    {{>text color='light' name='interior' noLine=true sq=true}} <br>
+                    {{>text color='light' name='interior' noLine=true sq=true}}
 
                     <div>
 
@@ -27,7 +27,7 @@
 
                         {{/with}}
 
-                    </div><br>
+                    </div>
 
                     <div>
 
@@ -53,7 +53,7 @@
                                 {{/with}}
 
                             </details>
-                        </div><br>
+                        </div>
 
                         {{/with}}
 
@@ -75,14 +75,14 @@
 
                     {{/with}}
 
-                </div><br>
+                </div>
 
                 <div>
 
                     {{#with exterior}}
                     <div>
 
-                        {{>text color='light' name='exterior' noLine=true sq=true}} <br>
+                        {{>text color='light' name='exterior' noLine=true sq=true}}
 
                         <div>
 
@@ -93,7 +93,7 @@
                             {{>text color='secondary' name='type' data=type}}
                             {{>text color='secondary' name='color' data=color}}
                             {{/with}}
-                        </div><br>
+                        </div>
 
                         <div>
 
@@ -104,7 +104,7 @@
                             {{>text color='danger' name='brightness' data=tbrightnesspe}}
                             {{>text color='success' name='automatic' data=automatic}}
                             {{/with}}
-                        </div><br>
+                        </div>
 
                         <div>
 
@@ -119,13 +119,13 @@
 
 
 
-                    </div><br>
+                    </div>
                     {{/with}}
 
                     <div>
                         {{#with safety}}
 
-                        {{>text color='light' name='safety' noLine=true sq=true}} <br>
+                        {{>text color='light' name='safety' noLine=true sq=true}}
 
                         <div>
 
@@ -138,7 +138,7 @@
                             {{>text color='success' name='adaptive cruise control' data=adaptive_cruise_control}}
                             {{>text color='success' name='collision warning' data=collision_warning}}
                             {{/with}}
-                        </div> <br>
+                        </div> 
 
                         {{/with}}
                     </div>
@@ -150,14 +150,14 @@
 
             <div>
 
-                {{>text color='light' name='engine' noLine=true sq=true}} <br>
+                {{>text color='light' name='engine' noLine=true sq=true}}
 
                 {{#with engine}}
 
                 {{>text color='secondary' name='type' data=type}}
                 {{>text color='danger' name='displacement' data=displacement}}
                 {{>text color='danger' name='horsepower' data=horsepower}}
-                {{>text color='danger' name='torque' data=torque}} <br>
+                {{>text color='danger' name='torque' data=torque}}
 
                 <div>
 
@@ -170,11 +170,11 @@
                 </div>
 
                 {{/with}}
-            </div><br>
+            </div>
 
             <div>
 
-                {{>text color='light' name='fuel economy' noLine=true sq=true}} <br>
+                {{>text color='light' name='fuel economy' noLine=true sq=true}}
 
                 {{#with fuel_economy}}
                 {{>text color='danger' name='city' data=city}}
@@ -186,12 +186,12 @@
 
             <div>
 
-                {{>text color='light' name='price' noLine=true sq=true}} <br>
+                {{>text color='light' name='price' noLine=true sq=true}}
 
                 {{#with price}}
 
                 {{>text color='secindary' name='base' data=base}}
-                {{>text color='danger' name='destination' data=destination}}<br>
+                {{>text color='danger' name='destination' data=destination}}
 
                 <div>
 
